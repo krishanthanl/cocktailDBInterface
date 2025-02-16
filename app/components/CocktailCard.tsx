@@ -1,3 +1,12 @@
+'use client';
+
+// This component use for display cocktail details
+// it contains an image of the cocktail, the cocktail name and category
+// further it contains "Add" button if it in used in search result to show
+// it contains "Remove" button when it in favorite list
+// however based on the description it does not contains any button
+// when it shows initial random data and when those random data refreshed
+
 // system import
 import Image from 'next/image';
 import { toast } from 'react-toastify';
@@ -7,7 +16,7 @@ import { ICocktailCardProp } from '../interface/ICocktail';
 import useFavorite from '../hooks/useFavorite';
 import { CocktailCardMode } from '../enum/CocktailCardMode';
 
-export default function CocktailCard({ cocktail, cardMode }: ICocktailCardProp) {
+const CocktailCard = ({ cocktail, cardMode }: ICocktailCardProp) => {
     const { addToFavorites, removeFromFavorites } = useFavorite();
 
     const handleAddClick = () => {
@@ -16,6 +25,8 @@ export default function CocktailCard({ cocktail, cardMode }: ICocktailCardProp) 
     }
 
     const handleRemoveClick = () => {
+        // adding items to favorites
+        // if it already contains we do not add it
         if(confirm('Are you sure you want to remove this cocktail from your favorites?') === false) return;
         removeFromFavorites(cocktail);
     }
@@ -32,3 +43,6 @@ export default function CocktailCard({ cocktail, cardMode }: ICocktailCardProp) 
         </div>
     );
 }
+
+CocktailCard.displayName = 'CocktailCard';
+export default CocktailCard;

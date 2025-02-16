@@ -1,5 +1,8 @@
 'use client';
 
+
+
+
 // local import
 import { ICocktail, ICocktailsGridProp } from "../interface/ICocktail";
 import CocktailCard from "./CocktailCard";
