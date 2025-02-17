@@ -1,5 +1,9 @@
 'use client';
 
+// this component will do search or show random cocktails (if user press refresh button)
+// it decide what is the mode (initial, searching, favorite)
+// then pass that to CocktailCard
+
 // System import
 import { useState } from 'react';
 
@@ -102,8 +106,6 @@ const SearchBar = ({initialCocktails}: ISearchBarProp) => {
 					}} />   
 				</div>
 			</div>
-			
-				
 		</div>
 	</>
 	);

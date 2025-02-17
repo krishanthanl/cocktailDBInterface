@@ -1,3 +1,6 @@
+'use client';
+
+// spinner when loading data
 const Loader = () => {
     return(
         <div className="flex justify-center items-center h-16" role="status" aria-label="Loading">

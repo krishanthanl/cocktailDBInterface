@@ -1,5 +1,8 @@
 'use client';
-
+// This component shows list if cocktails it got
+// it may initial, by refresh or by search
+// it have to tell CocktailCard to do it have to show "Add/Remove buttons"
+// or do not show button (in random mode) for that it use cardMode enum
 
 
 
@@ -9,7 +12,6 @@ import CocktailCard from "./CocktailCard";
 
 const CocktailsGrid = ({ cocktails }: { cocktails: ICocktailsGridProp }) => {
     const cocktailsToShow: ICocktail[] | null = cocktails.laterCocktails || cocktails.initialCocktails;
-    console.log('cocktailsToShow', cocktailsToShow);
 
     if(!cocktailsToShow || cocktailsToShow.length === 0) return(null);
     

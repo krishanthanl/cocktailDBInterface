@@ -14,10 +14,13 @@ Instructions on how to run your code locally
 	3 goto http://localhost:3000/
 	4 to run unit test use 
 	  npn run test
+if you need to view prod release please follow these steps
+	1  npm run build
+	2  npm run start
 
 assumptions
 	in random cocktails did not use "Add" button
-	
+	I did not add unit test for each and every components,	just added UT , that I thought important 
 	
 
 
