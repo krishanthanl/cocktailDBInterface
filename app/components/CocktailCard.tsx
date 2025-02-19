@@ -55,7 +55,10 @@ const CocktailCard = ({ cocktail, cardMode }: ICocktailCardProp) => {
                 <p className="text-gray-700">Category: {cocktail.strCategory}</p>
             </div>
             {cardMode !== CocktailCardMode.INITIAL && (
-                <CocktailCardActionButton handleActionButtonClick={handleActionButtonClick} cocktailCardMode={cardMode} />
+                <CocktailCardActionButton
+                    handleActionButtonClick={handleActionButtonClick}
+                    cocktailCardMode={cardMode}
+                />
             )}
         </div>
     )

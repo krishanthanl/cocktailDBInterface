@@ -31,7 +31,6 @@ const FavoritePage = () => {
                 </div>
             </div>
         </>
-        
     )
 }
 

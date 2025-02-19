@@ -17,13 +17,13 @@ export interface ICocktail {
 // Component Props
 export interface ICocktailsGridProp {
     cocktailList: ICocktail[] | null
-    cardMode: CocktailCardMode,
+    cardMode: CocktailCardMode
     isLoading: boolean
 }
 
 export interface ISearchBarProp {
     //initialCocktails: ICocktail[]
-    setSearchResults: (searchResults: ISearchResults) => void,
+    setSearchResults: (searchResults: ISearchResults) => void
     setLoading: (isLoading: boolean) => void
 }
 
@@ -45,11 +45,11 @@ export interface IFavoriteCocktailContext {
 }
 
 export interface ICocktailCardActionButton {
-    cocktailCardMode: CocktailCardMode,
-    handleActionButtonClick: () => void,
+    cocktailCardMode: CocktailCardMode
+    handleActionButtonClick: () => void
 }
 
 export interface ISearchResults {
-    searchResults: ICocktail[],
-    isSearchResults:boolean
+    searchResults: ICocktail[]
+    isSearchResults: boolean
 }

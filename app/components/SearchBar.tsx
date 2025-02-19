@@ -11,27 +11,29 @@ import { useState } from 'react'
 import { ISearchBarProp, ISearchResults } from '../interface/ICocktail'
 import { fetchUniqueRandomCocktails, searchCocktails } from '../lib/fetchCocktails'
 
-
 const SearchBar = ({ setSearchResults, setLoading }: ISearchBarProp) => {
     const [searchQuery, setSearchQuery] = useState('')
-    
+
     const [isLoading, setIsLoading] = useState<boolean>(false)
 
     const handleSearch = async () => {
         if (searchQuery.trim() !== '') {
             try {
-                setIsLoading(true);
-                setLoading(true);
+                setIsLoading(true)
+                setLoading(true)
                 //setIsSearchingMode(true)
                 const seaRes = await searchCocktails(searchQuery)
-                const searchResult: ISearchResults = { searchResults: seaRes, isSearchResults: true }
+                const searchResult: ISearchResults = {
+                    searchResults: seaRes,
+                    isSearchResults: true,
+                }
                 setSearchResults(searchResult)
             } catch (error) {
                 console.error('Error fetching search results:', error)
-                setEmptySearchResults();
+                setEmptySearchResults()
             } finally {
                 setIsLoading(false)
-                setLoading(false);
+                setLoading(false)
             }
         } else {
             setSearchQuery('')
@@ -46,10 +48,13 @@ const SearchBar = ({ setSearchResults, setLoading }: ISearchBarProp) => {
     const handleRefresh = async () => {
         try {
             setIsLoading(true)
-            setLoading(true);
-            
+            setLoading(true)
+
             const newRandomCocktailList = await fetchUniqueRandomCocktails()
-            const searchResult: ISearchResults = { searchResults: newRandomCocktailList, isSearchResults: false }
+            const searchResult: ISearchResults = {
+                searchResults: newRandomCocktailList,
+                isSearchResults: false,
+            }
             setSearchResults(searchResult)
         } catch (error) {
             console.error('Error fetching refresh results:', error)
@@ -57,13 +62,12 @@ const SearchBar = ({ setSearchResults, setLoading }: ISearchBarProp) => {
             setSearchResults(searchResult)
         } finally {
             setIsLoading(false)
-            setLoading(false);
+            setLoading(false)
         }
     }
 
     const handleSearchTextChange = (event: React.ChangeEvent<HTMLInputElement>) => {
         if (event.target.value === '') {
-            
             setSearchQuery('')
         } else {
             setSearchQuery(event.target.value)
@@ -75,8 +79,6 @@ const SearchBar = ({ setSearchResults, setLoading }: ISearchBarProp) => {
             handleSearch()
         }
     }
-
-    
 
     return (
         <>

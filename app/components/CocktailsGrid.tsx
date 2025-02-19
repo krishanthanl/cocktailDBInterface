@@ -7,12 +7,12 @@
 // local import
 import { ICocktail, ICocktailsGridProp } from '../interface/ICocktail'
 import CocktailCard from './CocktailCard'
-import Loader from './Loader';
+import Loader from './Loader'
 
-const CocktailsGrid = ({ cocktailList, isLoading, cardMode }: ICocktailsGridProp ) => {
+const CocktailsGrid = ({ cocktailList, isLoading, cardMode }: ICocktailsGridProp) => {
     // const cocktailsToShow: ICocktail[] | null =
     //     cocktails.laterCocktails || cocktails.initialCocktails
-    const cocktailsToShow: ICocktail[] | null = cocktailList;
+    const cocktailsToShow: ICocktail[] | null = cocktailList
 
     if (!cocktailsToShow || cocktailsToShow.length === 0) return null
 
@@ -23,11 +23,7 @@ const CocktailsGrid = ({ cocktailList, isLoading, cardMode }: ICocktailsGridProp
         // <div className="flex space-x-6 px-5 h-14 items-center justify-center mb-3 flex-wrap">
         <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
             {cocktailsToShow.map((cocktail) => (
-                <CocktailCard
-                    key={cocktail.idDrink}
-                    cocktail={cocktail}
-                    cardMode={cardMode}
-                />
+                <CocktailCard key={cocktail.idDrink} cocktail={cocktail} cardMode={cardMode} />
             ))}
         </div>
     )
