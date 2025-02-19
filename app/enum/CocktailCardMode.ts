@@ -1,1 +1,5 @@
-export enum CocktailCardMode { INITIAL,SEARCHING, FAVORITE };
+export enum CocktailCardMode {
+    INITIAL,
+    SEARCHING,
+    FAVORITE,
+}

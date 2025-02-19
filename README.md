@@ -1,32 +1,26 @@
-Overview of your solution : 
-	1 when initially load it will render 5 random cocktails
-	2 that work as SSR component 
-	3 Note: in the instruction it does not tell random cocktails should contains "Add" button
-		  So I did not add "Add" button in radome cocktails
-	4 when you do a search it will shows relevant cocktails with add button
-	5 if you click on Favorite link (top of the page) you will send to Favorite page
-	  in there you can see added cocktails with "Remove" button
-	6 you can remove added cocktails in favorite page
+Overview of your solution :
+1 when initially load it will render 5 random cocktails
+2 that work as SSR component
+3 Note: in the instruction it does not tell random cocktails should contains "Add" button
+So I did not add "Add" button in radome cocktails
+4 when you do a search it will shows relevant cocktails with add button
+5 if you click on Favorite link (top of the page) you will send to Favorite page
+in there you can see added cocktails with "Remove" button
+6 you can remove added cocktails in favorite page
 
 Instructions on how to run your code locally
-	1 npm install
-	2 npm run dev
-	3 goto http://localhost:3000/
-	4 to run unit test use 
-	  npn run test
+1 npm install
+2 npm run dev
+3 goto http://localhost:3000/
+4 to run unit test use
+npn run test
 if you need to view prod release please follow these steps
-	1  npm run build
-	2  npm run start
+1 npm run build
+2 npm run start
 
 assumptions
-	in random cocktails did not use "Add" button
-	I did not add unit test for each and every components,	just added UT , that I thought important 
-	
-
-
-
-
-
+in random cocktails did not use "Add" button
+I did not add unit test for each and every components, just added UT , that I thought important
 
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
