@@ -1,4 +1,4 @@
-Overview of your solution :
+Overview of solution :
 1 when initially load it will render 5 random cocktails
 2 that work as SSR component
 3 Note: in the instruction it does not tell random cocktails should contains "Add" button
