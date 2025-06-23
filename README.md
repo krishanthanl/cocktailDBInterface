@@ -12,13 +12,20 @@ in there you can see added cocktails with "Remove" button
 5 you can remove added cocktails in favorite page
 
 Instructions on how to run your code locally
+
 1 npm install
+
 2 npm run dev
+
 3 goto http://localhost:3000/
+
 4 to run unit test use
+
 npn run test
 if you need to view prod release please follow these steps
+
 1 npm run build
+
 2 npm run start
 
 assumptions
