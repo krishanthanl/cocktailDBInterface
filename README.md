@@ -1,12 +1,15 @@
 Overview of solution :
 1 when initially load it will render 5 random cocktails
+
 2 that work as SSR component
-3 Note: in the instruction it does not tell random cocktails should contains "Add" button
-So I did not add "Add" button in radome cocktails
-4 when you do a search it will shows relevant cocktails with add button
-5 if you click on Favorite link (top of the page) you will send to Favorite page
+
+3 when you do a search it will shows relevant cocktails with add button
+
+4 if you click on Favorite link (top of the page) you will send to Favorite page
+
 in there you can see added cocktails with "Remove" button
-6 you can remove added cocktails in favorite page
+
+5 you can remove added cocktails in favorite page
 
 Instructions on how to run your code locally
 1 npm install
